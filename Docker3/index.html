@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    
+    <title>Event Registration Form</title>
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Container styling */
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        /* Heading styling */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Input field styling */
+        .inputbox {
+            margin-bottom: 15px;
+        }
+
+        .inputbox input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .inputbox input:focus {
+            border-color: #007bff;
+        }
+
+        /* Label styling */
+        .inputbox label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* Button styling */
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Success message styling */
+        .success-message {
+            text-align: center;
+            color: green;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form id="registrationForm">
+            <h2>Event Registration</h2>
+            
+            <!-- First Name Field -->
+            <div class="inputbox">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            
+            <!-- Last Name Field -->
+            <div class="inputbox">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="inputbox">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <!-- Phone Number Field -->
+            <div class="inputbox">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Register</button>
+            
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                Thank you for registering!
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for handling form submission
+        const form = document.getElementById('registrationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Display the success message
+            successMessage.style.display = 'block';
+
+            // Reset the form fields after successful submission
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>

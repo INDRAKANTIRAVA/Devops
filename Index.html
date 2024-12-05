@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>User registration form for a competetive exam</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+h1{text-align: center;}
+</style>
+</head>
+<body>
+<h1>Registration Form </h1>
+    <form>
+        First name: <input type="text" id="firstname"><br>
+        Last name: <input type="text" id="lastname"><br>
+        Father's name: <input type="text" id="fathername"><br>
+        Mother's name: <input type="text" id="mothername"><br>
+        E-mail: <input type="email" id="email"><br>
+        Phone number: <input type="number" id="pno"><br>
+        Date of Birth: <input type="date" id="dob"><br>
+        Gender:
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female<br>
+        Qualification <input type="text" id="quali"><br>
+        Upload passport size photo: <input type="file" accept="image/*"  id="passpic"><br>
+        Upload signature: <input type="file" accept="image/*" id="sign"><br>
+        <input type="button" value="Submit" onclick="get_info();">
+        <input type="reset" value="Reset">
+    </form>
+    <script src="validate.js"></script>
+</body>
+</html>
